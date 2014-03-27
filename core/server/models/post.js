@@ -254,7 +254,7 @@ Post = ghostBookshelf.Model.extend({
     findPage: function (opts) {
         var postCollection = Posts.forge(),
             tagInstance = opts.tag !== undefined ? Tag.forge({slug: opts.tag}) : false,
-            permittedOptions = ['page', 'limit', 'status', 'staticPages'];
+            permittedOptions = ['page', 'limit', 'status', 'staticPages', 'columns'];
 
         // sanitize opts so we are not automatically passing through any and all
         // query strings to Bookshelf / Knex. Although the API requires auth, we
